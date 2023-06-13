@@ -39,66 +39,66 @@ function APAR_Form() {
                     // <h2 className='ui-define'>Hello {inputData.name}, You,ve Submitted Successfully</h2>
                     : ""}
             </pre>
-            <form className='container' onSubmit={handleSubmit}>
-                <div className='header'>
+            <form className='container_apar' onSubmit={handleSubmit}>
+                <div className='heading'>
                     <h1>APAR Management Form</h1>
                 </div>
                 <div className='period'>
-                    <div className='title'><h3>Report for the Period :</h3></div>
+                    <div className='title'><h4>Report for the Period :</h4></div>
                     <div className='content'>
-                        <div><h4>From</h4><input type='date'
-                            name="from" value={inputData.from} onChange={handleData}  className="input"></input> 
+                        <div className='from'><input type='text'placeholder='FROM : DD / MM / YYYY'
+                            name="from" value={inputData.from} onChange={handleData} className="inp" ></input> 
                         </div>
-                        <div><h4>Upto </h4><input type='date'
-                            name="upto" value={inputData.upto} onChange={handleData} className="input"></input>
+                        <div className='upto'><input type='text'placeholder='TO : DD / MM / YYYY'
+                            name="upto" value={inputData.upto} onChange={handleData} className="inp"></input>
 
                         </div>
                     </div>
                 </div>
                 <div className='personal_deatils'>
                     <div>
-                        <input type='text' placeholder='Name'
-                            name="name" value={inputData.name} onChange={handleData} className="input"></input>
+                        <input  type='text' placeholder='Name'
+                            name="name" value={inputData.name} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Employee Id'
-                            name="emp_id" value={inputData.emp_id} onChange={handleData } className="input"></input>
+                            name="emp_id" value={inputData.emp_id} onChange={handleData } className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Date of birth'
-                            name="dob" value={inputData.dob} onChange={handleData} className="input"></input>
+                            name="dob" value={inputData.dob} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Designation'
-                            name="designation" value={inputData.designation} onChange={handleData} className="input"></input>
+                            name="designation" value={inputData.designation} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Present Pay'
-                            name="pay" value={inputData.pay} onChange={handleData} className="input"></input>
+                            name="pay" value={inputData.pay} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Section/Group'
-                            name="grp" value={inputData.grp} onChange={handleData} className="input"></input>
+                            name="grp" value={inputData.grp} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
-                        <input type='text' placeholder='Date of entry in C-DAC'
-                            name="entrydate" value={inputData.entrydate} onChange={handleData} className="input"></input>
+                        <input type='text' placeholder='Date of entry in C-DAC : DD / MM / YYYY'
+                            name="entrydate" value={inputData.entrydate} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Date of entry to the current designation'
-                            name="date" value={inputData.date} onChange={handleData} className="input"></input>
+                            name="date" value={inputData.date} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Leave availed'
-                            name="leave" value={inputData.leave} onChange={handleData} className="input"></input>
+                            name="leave" value={inputData.leave} onChange={handleData} className="inp"></input>
                     </div>
                     <div>
                         <input type='text' placeholder='Absence from duty other then leave'
-                            name="otherleave" value={inputData.otherleave} onChange={handleData} className="input"></input>
+                            name="otherleave" value={inputData.otherleave} onChange={handleData} className="inp"></input>
                     </div>
                 </div>
                 <div>
-                    <button type='submit' className='submitBtn' >submit</button>
+                    <button type='submit' className='submitbtn' >submit</button>
                 </div>
             </form>
         </>
