@@ -1,7 +1,7 @@
 # HRMIS CDAC
 ## Frontend
-_PORT 3000_
+_PORT http://localhost:3000/_
 > npm start
 ## Backtend 
-_PORT 5000_
+_PORT http://localhost:5000/_
 > nodemon index.js
