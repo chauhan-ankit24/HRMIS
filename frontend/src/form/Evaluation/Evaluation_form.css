@@ -1,9 +1,11 @@
 .Evaluation_form_page {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .Evaluation_form_page .Evaluation_heading {
+  width: 70%;
   background: #9fc8fe;
   background-blend-mode: hard-light;
   mix-blend-mode: normal;
@@ -11,7 +13,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-  width: 1189px;
 }
 .Evaluation_form_page .Evaluation_heading span {
   display: flex;
@@ -27,6 +28,9 @@
   font-size: 24px;
   line-height: 29px;
   color: #000000;
+}
+.Evaluation_form_page .Evaluation_main {
+  width: 70%;
 }
 .Evaluation_form_page .Evaluation_main .input {
   display: flex;
@@ -44,18 +48,19 @@
 }
 .Evaluation_form_page .Evaluation_main .Evaluation_form_wrapper {
   display: flex;
+  gap: 1rem;
 }
 .Evaluation_form_page .Evaluation_main .Evaluation_form_wrapper img {
-  width: 606px;
+  width: 50%;
   height: 392px;
 }
 .Evaluation_form_page .Evaluation_main .Evaluation_form_wrapper .Employee_details {
+  width: 50%;
   display: flex;
   gap: 1rem;
   padding: 2rem;
   flex-direction: column;
   justify-content: center;
-  width: 583px;
   height: 376px;
 }
 .Evaluation_form_page .Evaluation_main .Evaluation_form_wrapper .Employee_details .Name_of_employee,
@@ -68,7 +73,7 @@
   gap: 0.3rem;
 }
 .Evaluation_form_page .Evaluation_main .Evaluation_form_wrapper .Employee_details .Name_of_group_head input {
-  width: 458px !important;
+  width: 100%;
 }
 .Evaluation_form_page .Evaluation_main .Evaluation_form_wrapper .Employee_details .Designation_date {
   display: flex;
@@ -89,6 +94,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .Evaluation_form_page .Evaluation-and-OverAllPerformance .Evaluation_score .progress-bars .progress-bar {
   display: flex;
@@ -96,11 +102,12 @@
   flex-direction: column;
   margin-bottom: 10px;
   gap: 0.5rem;
+  width: 100%;
 }
 .Evaluation_form_page .Evaluation-and-OverAllPerformance .Evaluation_score .progress-bars .progress-bar .prog-bar {
   display: flex;
   align-items: center;
-  width: 600pxpx;
+  width: 100%;
   gap: 0.5rem;
   padding: 0.5rem;
 }
@@ -112,7 +119,7 @@
   cursor: pointer;
 }
 .Evaluation_form_page .Evaluation-and-OverAllPerformance .Evaluation_score .progress-bars .progress-bar .bar {
-  width: 542px;
+  width: 90%;
   height: 20px;
   position: relative;
   border: 1px solid #000000;
