@@ -38,7 +38,7 @@ const SelfAppraisalForm = () => {
                     <h1>Self Appraisal Form</h1>               </div>
                 <div>
                     <label htmlFor="username"></label>
-                    <input type="text" placeholder='Name Of Employee' autoComplete="off"
+                    <input type="text" placeholder='Name Of Employee' autoComplete="off" className='input'
                         value={userregistration.username}
                         onChange={handleInput}
                         name="username" id="username" />
@@ -46,7 +46,7 @@ const SelfAppraisalForm = () => {
                 </div>
                 <div>
                     <label htmlFor="EmployeeID"></label>
-                    <input type="text" placeholder='Employee ID' autoComplete="off"
+                    <input type="text" placeholder='Employee ID' autoComplete="off" className='input'
                         value={userregistration.EmployeeID}
                         onChange={handleInput}
 
@@ -54,28 +54,28 @@ const SelfAppraisalForm = () => {
                 </div>
                 <div>
                     <label htmlFor="Position"></label>
-                    <input type="text" placeholder='Position' autoComplete="off"
+                    <input type="text" placeholder='Position' autoComplete="off" className='input'
                         value={userregistration.position}
                         onChange={handleInput}
                         name="Position" id="Position" />
                 </div>
                 <div>
                     <label htmlFor="SelfAppraisalPeriod"></label>
-                    <input type="text" placeholder='Self Appraisal Period' autoComplete="off"
+                    <input type="text" placeholder='Self Appraisal Period' autoComplete="off" className='input'
                         value={userregistration.SelfAppraisalPeriod}
                         onChange={handleInput}
                         name="SelfAppraisalPeriod" id="SelfAppraisalPeriod" />
                 </div>
                 <div>
                     <label htmlFor="EmailID"></label>
-                    <input type="text" placeholder='Email ID' autoComplete="off"
+                    <input type="text" placeholder='Email ID' autoComplete="off" className='input'
                         value={userregistration.EmailID}
                         onChange={handleInput}
                         name="EmailID" id="EmailID" />
                 </div>
                 <div>
                     <label htmlFor="CurrentResponsiblities"></label>
-                    <input type="text" placeholder='Current Responsiblities' autoComplete="off"
+                    <input type="text" placeholder='Current Responsiblities' autoComplete="off" className='input'
                         value={userregistration.CurrentResponsiblities}
                         onChange={handleInput}
                         name="CurrentResponsiblities" id="CurrentResponsiblities" />
@@ -83,14 +83,14 @@ const SelfAppraisalForm = () => {
                 <div className='box'>
                     <div>
                         <label htmlFor="JobAsssigned"></label>
-                        <input type="text" placeholder='Job Asssigned' autoComplete="off"
+                        <input type="text" placeholder='Job Asssigned' autoComplete="off" className='input'
                             value={userregistration.JobAsssigned}
                             onChange={handleInput}
                             name="JobAsssigned" id="JobAsssigned" />
                     </div>
                     <div>
                         <label htmlFor="SpecificAchievementByTheEmployee"></label>
-                        <input type="text" placeholder='Specific  Achievement  By  The Employee ' autoComplete="off"
+                        <input type="text" placeholder='Specific  Achievement  By  The Employee ' autoComplete="off" className='input'
                             value={userregistration.SpecificAchievementByTheEmployee}
                             onChange={handleInput}
                             name="SpecificAchievementByTheEmployee" id="SpecificAchievementByTheEmployee" />
@@ -100,21 +100,21 @@ const SelfAppraisalForm = () => {
                     <div>
 
                         <label htmlFor="SingnatureOfEmployee"></label>
-                        <input type="text" placeholder='Singnature Of  Employee' autoComplete="off"
+                        <input type="text" placeholder='Singnature Of  Employee' autoComplete="off" className='input'
                             value={userregistration.SingnatureOfEmployee}
                             onChange={handleInput}
                             name="SingnatureOfEmployee" id="SingnatureOfEmployee" />
                     </div>
                     <div>
                         <label htmlFor="Date"></label>
-                        <input type="date" placeholder='Date' autoComplete="off"
+                        <input type="date" placeholder='Date' autoComplete="off" className='input'
                             value={userregistration.Date}
                             onChange={handleInput}
                             name="Date" id="Date" />
                     </div>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" className='submitBtn' >Submit</button>
             </form>
         </>
     )
