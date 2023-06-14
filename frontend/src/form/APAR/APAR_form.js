@@ -39,12 +39,13 @@ function APAR_Form() {
                     // <h2 className='ui-define'>Hello {inputData.name}, You,ve Submitted Successfully</h2>
                     : ""}
             </pre>
+            <div className='parent_container'>
             <form className='container_apar' onSubmit={handleSubmit}>
                 <div className='heading'>
                     <h1>APAR Management Form</h1>
                 </div>
                 <div className='period'>
-                    <div className='title'><h4>Report for the Period :</h4></div>
+                    <div className='title'><span>Report for the Period :</span></div>
                     <div className='content'>
                         <div className='from'><input type='text'placeholder='FROM : DD / MM / YYYY'
                             name="from" value={inputData.from} onChange={handleData} className="inp" ></input> 
@@ -97,10 +98,11 @@ function APAR_Form() {
                             name="otherleave" value={inputData.otherleave} onChange={handleData} className="inp"></input>
                     </div>
                 </div>
-                <div>
-                    <button type='submit' className='submitbtn' >submit</button>
+                <div className='btn_class'>
+                    <button type='submit' className='submitbtn_apar' >submit</button>
                 </div>
             </form>
+            </div>
         </>
     )
 }
