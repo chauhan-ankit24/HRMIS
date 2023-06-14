@@ -45,3 +45,22 @@ export const getRequests = async (req, res) => {
     }
 };
 
+export const submitSelfAppraisel = async (req, res) => {
+    const { email } = req.body;
+    const newData = req.body;
+    try {
+        const user = await User.findOne({ email: email });
+        if (user) {
+            Object.keys(newData).forEach(key => {
+                if (user[key] !== undefined) {
+                    user[key] = newData[key];
+                }
+            });
+            const updatedData = await user.save();
+            res.json(updatedData);
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred');
+    }
+};

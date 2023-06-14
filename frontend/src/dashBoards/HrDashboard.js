@@ -32,7 +32,7 @@ const HrDashboard = () => {
           <li><a href="/">Settings</a></li>
         </ul>
       </div>
-      <div className="container">
+      <div className="containerDash">
         <div className="card">
           <h2>Welcome, {user.email}</h2>
           <p>You have 50 employees in your company.</p>
@@ -45,11 +45,11 @@ const HrDashboard = () => {
           <h2>Recent Requests</h2>
 
           {show.map((employee) =>
-            <>
+            <div className="action">
               <p>Request from : {employee.email}</p>
-              <button onClick={fillForrm}>Fill apprasel form</button>
+              <button  onClick={fillForrm}>Fill apprasel form</button>
               <br />
-            </>
+            </div>
           )}
 
         </div>

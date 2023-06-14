@@ -13,12 +13,12 @@ const EmployeeDashboard = () => {
   const generate = () => {
     axios.post("http://localhost:5000/updateRequest", user)
       .then(res => {
-        // alert("request send");
+        alert("request send");
         // navigate("/Dash2");
         // console.log(res.data);
         setUser({
           email: res.data.email,
-          passwoed: res.data.passwoed,
+          password: res.data.password,
           request: res.data.request
         });
       })
@@ -39,13 +39,15 @@ const EmployeeDashboard = () => {
           <li><a href="/">Settings</a></li>
         </ul>
       </div>
-      <div className="container">
+      <div className="containerDash">
         <div className="card">
           <h2>Welcome, {user.email}</h2>
           <div className="action">
             <button onClick={generate}>{user.request ? <h4>Request already Done</h4> : <h4>No Request given yet</h4>}</button>
             <br />
-            <button onClick={fillForrm}>Fill APAR Management form</button>
+            <div className="action">
+              <button onClick={fillForrm}>Fill your self appraisel form</button>
+            </div>
           </div>
         </div>
       </div>
