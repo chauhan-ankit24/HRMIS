@@ -1,11 +1,16 @@
+.parent_container{
+    display: flex;
+}
+
 
 .container_apar{
     background-color: #f2f2f2;
     justify-content: center;
-    width: 50%;
-    margin-left:26% ;
-    margin-top: 1%;
+    width: 60%;
+    margin: 1% 20%;
     text-align: center;
+    border: 2px solid rgb(235, 231, 231);
+
 
 }
 .inp{
@@ -22,10 +27,17 @@
   
 }
 
+.btn_class{
 
-.submitbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submitbtn_apar{
+    display: flex;
+    justify-content: center;
     width: 30%;
-    background-color: #08090a;
+    background-color: #5b91d9;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -33,12 +45,13 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.submitbtn:hover{
+.submitbtn_apar:hover{
     background-color: #5b91d9;
 }
 .heading{
 
-
+    display:flex ;
+    justify-content: center;
     background-color: #5b91d9;
     color: white;
   border-radius: 20px;
@@ -51,9 +64,15 @@
  .period{
     margin-top: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    width: 96%;
 
+}
+.title{
+    display: flex;
+    justify-content: center;
+    width: 30%;
 }
 
 .content{
@@ -61,6 +80,15 @@
     display: flex;
     justify-content: space-evenly;
     gap: 1em;
+    width: 70%;
 
 
+}
+.from{
+    display: flex;
+    width: 100%;
+}
+.upto{
+    display: flex;
+    width: 100%;
 }

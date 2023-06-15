@@ -22,6 +22,14 @@ const HrDashboard = () => {
     // console.log({ empReq });
     navigate("/APAR ");
   }
+  // const sendToEmployee = (e) => {
+  //   axios
+  //     .post("http://localhost:5000/setHrFilledForm", e)
+  //     .then(({ data }) => {
+  //       setEmpReq(data);
+  //     })
+  // }
+
 
   return (
     <div>
@@ -49,11 +57,9 @@ const HrDashboard = () => {
           {empReq.map((e, index) =>
             <div className="action">
               <p>Request from : {e.email}</p>
-              <button onClick={() => fillForrm(index)}>Fill apprasel form</button>
-              <br />
+              {!e.filledByHr ? <button onClick={() => fillForrm(index)}>Fill apprasel form</button> : <p>filled</p>}
             </div>
           )}
-
         </div>
       </div>
     </div>

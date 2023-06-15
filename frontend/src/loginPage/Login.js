@@ -8,7 +8,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const { user, setUser } = useContext(StateContext);
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUser({
@@ -20,9 +20,12 @@ const Login = () => {
         axios.post("http://localhost:5000/login", user)
             .then(res => {
                 alert(res.data.message)
-                // setUser(res.data.user)
+                setUser(res.data.user)
                 if (res.data.user.email === "hr") {
                     navigate("/HrDashboard ")
+                }
+                else if (res.data.user.email === "oo") {
+                    navigate("/RepOfficerDashboard")
                 }
                 else {
                     navigate("/EmployeeDashboard")
