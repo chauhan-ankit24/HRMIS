@@ -15,25 +15,21 @@ const SelfAppraisalForm = () => {
             [name]: value
         })
     }
-    const handleSubmit = () => {
-        axios.put("http://localhost:5000/submitSelfAppraisel", user)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post("http://localhost:5000/submitSelfAppraisel", user)
             .then(res => {
-                console.log(res.data.email);
-                alert("data added");
-                // setUser(res.data);
-                // navigate("/EmployeeDashboard ");
-                const { name, value } = res.data;
-                setUser({
-                    ...user,
-                    [name]: value
-                })
-                console.log(user);
+                console.log(res.data);
+                // alert("data added");
+                setUser(res.data);
+                navigate("/EmployeeDashboard ");
+                // console.log(user);
             })
     }
 
     return (
         <>
-            <form className='container2' action="/EmployeeDashboard">
+            <form className='container2' >
                 <div className='heading'>
                     <h1>Self Appraisal Form</h1>
                 </div>
@@ -164,7 +160,7 @@ const SelfAppraisalForm = () => {
                     </div>
                 </div>
 
-                <button onClick={handleSubmit.bind(this)} className='submitbtn'>Submit</button>
+                <button onClick={handleSubmit} className='submitbtn'>Submit</button>
             </form>
         </>
     )

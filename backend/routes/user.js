@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/Login', Login)
 router.post('/updateRequest', updateRequest);
-router.put('/submitSelfAppraisel', submitSelfAppraisel);
+router.post('/submitSelfAppraisel', submitSelfAppraisel);
 router.get('/getRequests', getRequests);
 
 export default router;

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './Dash1.css'
 import { useNavigate } from 'react-router-dom'
 import StateContext from '../StateContext';
@@ -6,18 +6,20 @@ import axios from 'axios';
 
 const HrDashboard = () => {
   const navigate = useNavigate();
-  const { user } = useContext(StateContext);
-  const [show, setShow] = useState([]);
+  const { user, empReq, setEmpReq, setReqUserId } = useContext(StateContext);
 
   useEffect(() => {
     axios
       .get("http://localhost:5000/getRequests")
       .then(({ data }) => {
         console.log('data ---> ', data);
-        setShow(data);
+        setEmpReq(data);
       })
   }, [])
-  const fillForrm = () => {
+  const fillForrm = (index) => {
+    setReqUserId(index);
+    // console.log({ index });
+    // console.log({ empReq });
     navigate("/APAR ");
   }
 
@@ -44,10 +46,10 @@ const HrDashboard = () => {
         <div className="card">
           <h2>Recent Requests</h2>
 
-          {show.map((employee) =>
+          {empReq.map((e, index) =>
             <div className="action">
-              <p>Request from : {employee.email}</p>
-              <button  onClick={fillForrm}>Fill apprasel form</button>
+              <p>Request from : {e.email}</p>
+              <button onClick={() => fillForrm(index)}>Fill apprasel form</button>
               <br />
             </div>
           )}
