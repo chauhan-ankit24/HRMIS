@@ -11,16 +11,46 @@ import { Employee } from "./Components/main/Employee";
 import { HR } from "./Components/main2/HR";
 import { RPO } from "./Components/main3/RPO";
 import APAR_form from './Components/form/APAR/APAR_form';
-import SelfAppraisalForm from './form/SelfAppraisal/SelfAppraisal_form';
+import SelfAppraisalForm from './Components/form/SelfAppraisal/SelfAppraisal_form'
+
 function App() {
   const [user, setUser] = useState({
     email: "",
     password: "",
-    request: false
+
+    request: false,
+    filledByHr: false,
+    filledByEmployee: false,
+
+    username: "",
+    EmployeeID: "",
+    SelfAppraisalPeriod_from: "",
+    SelfAppraisalPeriod_to: "",
+    ProjectName: "",
+    CurrentResponsiblities: "",
+    JobAsssigned: "",
+    SpecificAchievementByTheEmployee: "",
+    SingnatureOfEmployee: "",
+    Date: "",
+
+    entrydate: "",
+    dob: "",
+    designation: "",
+    pay: "",
+    grp: "",
+    leave: "",
+    otherleave: "",
+    Aparfrom: "",
+    Aparupto: "",
+    Apardate: "",
+
   })
+  const [empReq, setEmpReq] = useState([]);
+  const [requserId, setReqUserId] = useState();
+
   return (
     <div className="App">
-      <StateContext.Provider value={{ user, setUser }}>
+      <StateContext.Provider value={{ user, setUser, empReq, setEmpReq, requserId, setReqUserId }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Navigate replace to="/Login" />} />

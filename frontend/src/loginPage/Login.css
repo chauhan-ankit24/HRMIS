@@ -1,21 +1,22 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-}
+    align-items: center;
+} */
 
-.container {
-    width: 80vw;
-    /* margin: 0 auto; */
+.containerLogin {
+    max-width: 60vw;
+    max-height: 80vh;
     padding: 20px;
-    background-color: #8fc2e7;
+    background-color: #9FC8FE;
     border: 1px solid #dfc0c0;
     border-radius: 5px;
-    margin-top: 100px;
+    margin: 7vh 20vw 0 20vw;
 }
 
-h2 {
+/* h2 {
     text-align: center;
-}
+} */
 
 .form-group {
     margin-bottom: 20px;

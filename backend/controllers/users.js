@@ -47,3 +47,41 @@ export const getRequests = async (req, res) => {
     }
 };
 
+export const submitSelfAppraisel = async (req, res) => {
+    const { email } = req.body;
+    const newData = req.body;
+    try {
+        const user = await User.findOne({ email: email });
+        if (user) {
+            Object.keys(newData).forEach(key => {
+                if (user[key] !== undefined) {
+                    user[key] = newData[key];
+                }
+            });
+            user.filledByEmployee = !user.filledByEmployee;
+            const updatedData = await user.save();
+            res.json(updatedData);
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred');
+    }
+};
+
+export const submitAparForm = async (req, res) => {
+    const { email } = req.body;
+    try {
+        const user = await User.findOne({ email: email });
+        if (user) {
+            user.filledByHr = !user.filledByHr;
+            user.request = !user.request;
+            await user.save();
+            res.json(user);
+        } else {
+            res.status(404).send('Employee not found');
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred');
+    }
+};
