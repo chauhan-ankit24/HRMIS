@@ -121,7 +121,7 @@ export const Evaluation_form = () => {
   return (
     <div className="Evaluation_form_page">
       <div className="Evaluation_heading">
-        <span>Evaluation Form For Employs on Consolidated Pay</span>
+        <span>Evaluation Form For Employees on Consolidated Pay</span>
       </div>
       <div className="Evaluation_main">
         <div className="Evaluation_form_wrapper">

@@ -3,10 +3,12 @@ import User from '../models/user.js';
 export const Login = async (req, res) => {
     try {
         const { email, password } = req.body
-        const user = await User.findOne({ email: email });
+        console.log({ email, password });
+        const user = await User.findOne({ email  });
+        console.log({user});
         if (user) {
             if (password === user.password) {
-                res.send({ message: "Login Successfull", user: user })
+                res.send({status : 200, message: "Login Successfull", user: user })
             } else {
                 res.send({ message: "Password didn't match" })
             }

@@ -1,42 +1,20 @@
-/* body {
-    background-color: #b2aba9;
-} */
-
-.container {
-    background-color: #f2f2f2;
-    justify-content: center;
-    width: 60%;
-    margin-left: 26%;
-    margin-top: 2%;
-    text-align: center;
-
+.inp {
+    width: 90%;
+    padding: 0.5rem;
+  height: 46px;
+  border: 1px solid #9fc8fe;
+  background: #ffffff;
+  background-blend-mode: multiply;
+  border: 1px solid #9fc8fe;
+  border-radius: 10px;
+  margin: 8px 0;
 }
 
-.input[type=text],
-select {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
-.input[type=date],
-select {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
-.submitBtn {
+.submitbtn{
     width: 30%;
-    background-color: #4CAF50;
+    background-color: #5b91d9;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -44,17 +22,20 @@ select {
     border-radius: 4px;
     cursor: pointer;
 }
-
-.submitBtn:hover {
-    background-color: #45a049;
+.submitbtn:hover{
+    background-color: #5b91d9;
 }
+.heading{
 
-.header {
 
-    background-color: rgb(7, 2, 71);
+    background-color: #5b91d9;
     color: white;
-    padding: 7px;
+  border-radius: 20px;
+
+    padding: 3px;
+
 }
+
 
 #SpecificAchievementByTheEmployee {
     height: 110px;
@@ -63,4 +44,94 @@ select {
 #JobAsssigned {
     height: 110px;
 
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.inp1{
+    /* width: 100%; */
+    padding: 0.5rem;
+  height: 46px;
+  border: 1px solid #9fc8fe;
+  background: #ffffff;
+  background-blend-mode: multiply;
+  border: 1px solid #9fc8fe;
+  border-radius: 10px;
+  margin: 8px 0;
+  flex-grow: 1;
+}
+.row2{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* gap: 1em; */
+}
+.title_saf{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.period_saf{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+.row1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1em;
+
+
+}
+.emp_id{
+    display: flex;
+    gap: 1em;
+}
+.pos{
+    display: flex;
+    gap: 1em;
+
+}
+.title_empid{
+   
+
+    display: flex;
+
+    align-items: center;
+}
+.title_pos{
+ 
+    display: flex;
+    align-items: center;
+
+}
+.row4{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    gap: 2em;
+
+
+}
+.sign{
+    display: flex;
+    gap: 1em;
+}
+.title_sign{
+    display: flex;
+    align-items: center;
+}
+.date{
+    display: flex;
+    gap: 1em;
+}
+.title_date{
+    
+    display: flex;
+    align-items: center;
 }

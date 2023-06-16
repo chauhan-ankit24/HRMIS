@@ -14,7 +14,8 @@ const Login = () => {
             [name]: value
         })
     }
-    const login = () => {
+    const login = (e) => {
+            e.preventDefault();
         axios.post("http://localhost:5000/login", user)
             .then(res => {
                 alert(res.data.message)
@@ -35,16 +36,16 @@ const Login = () => {
             <h2>Login your Account</h2>
             <form>
                 <div className="form-group">
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" name="email" value={user.email} onChange={handleChange} placeholder="Enter your email" />
                 </div>
                 <div className="form-group">
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Enter your password" />
                 </div>
                 <div className="form-group">
                     <input type="checkbox" id="remember" name="remember" />
-                    <label for="remember">Remember me</label>
+                    <label htmlFor="remember">Remember me</label>
                 </div>
                 <div className="form-group">
                     <button onClick={login}>Login</button>
