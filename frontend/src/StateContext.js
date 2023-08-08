@@ -15,7 +15,9 @@ const AppProvider = ({ children }) => {
   const getusers = async () => {
     setloading(true)
     const { data } = await axios.get(BASE_URL + "getUsers");
-    const allemp = data.filter((element)=>element.Role.HR === false)
+    console.log("fdljfskdljfdslkjfdskljfsdkl",data);
+    const allemp = data.filter((element)=>element?.Role?.HR === false)
+    console.log(allemp,"dffdd");
     setfilteredarray(allemp)
     setuser(allemp);
     setloading(false)

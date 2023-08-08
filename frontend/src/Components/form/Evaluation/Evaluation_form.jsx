@@ -704,7 +704,16 @@ export const Evaluation_form = () => {
               value={CurEmp.additionalComments}
               placeholder="Additional Comments,if any"
               onChange={(e) =>
-                setCurEmp({ ...CurEmp, additionalComments: e.target.value })
+                setCurEmp({
+                  ...CurEmp,
+                  quarter: [
+                    ...CurEmp.quarter.slice(0, CurEmp.quarter.length - 1),
+                    {
+                      ...CurEmp.quarter[CurEmp.quarter.length - 1],
+                      additionalComments : e.target.value
+                    },
+                  ],
+                })
               }
               required
               disabled={!isEditing}
